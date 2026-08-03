@@ -1,0 +1,81 @@
+input, button, select{
+    background-color: black;
+    border-radius: 16px;
+    text-align: center;
+    padding: 8px 4px;
+    color: #F4A261;
+    font-weight: bold;
+    width: 300px;
+    font-size: 1.1rem;
+}
+
+label{
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+button{
+    cursor: pointer;
+}
+
+.resposta, .resposta_nome{
+    font-size: 1.1rem;
+    color: white;
+    font-weight: bold;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+th{
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+th, td {
+    border: 2px solid white;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}
+
+/* Dashboard de produtos em cards */
+.dashboard{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card{
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+    padding: 16px;
+    width: 220px;
+    color: white;
+}
+
+.card img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card h3{
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+/* Gráficos */
+.grafico_container{
+    max-width: 700px;
+    margin: 30px auto;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 12px;
+}
