@@ -1,0 +1,64 @@
+const { DataTypes } = require('sequelize')
+const db = require('../db/conn')
+
+const Compra = db.define('compra',{
+    codCompra: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+        autoIncrement: true,
+    },
+    idUsuario: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: {
+            model: 'usuarios',
+            key: 'codUsuario'
+        }
+    },
+    idProduto: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        references: {
+            model: 'produtos',
+            key: 'codProduto'
+        }
+    },
+    tipoMovimento: {
+        type: DataTypes.ENUM('ENTRADA','SAIDA'),
+        allowNull: false
+    },
+    quantidade: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
+    precoUnitario: {
+        type: DataTypes.DECIMAL(10,2),
+        allowNull: false
+    },
+    desconto: {
+        type: DataTypes.DECIMAL(5,2),
+        allowNull: false,
+        defaultValue: 0
+    },
+    precoFinal: {
+        type: DataTypes.DECIMAL(10,2), // calculado no controller
+        allowNull: false
+    },
+    formaPagamento: {
+        type: DataTypes.ENUM('DEBITO','CREDITO','DINHEIRO'),
+        allowNull: false
+    },
+    status: {
+        type: DataTypes.ENUM('PAGA','PENDENTE'),
+        allowNull: false
+    },
+    data: {
+        type: DataTypes.DATEONLY,
+        allowNull: false
+    }
+},{
+    timestamps: false,
+    tableName: 'compras'
+})
+
+module.exports = Compra
