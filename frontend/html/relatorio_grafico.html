@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style_cad.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/relatorio_grafico.js" defer></script>
+    <title>Relatório Gráfico</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../index.html">Home</a>&emsp;&emsp;
+            <span class="titulo_menu">Relatórios</span>&emsp;
+            <a href="./relatorio_analitico.html">Relatório Analítico</a>&emsp;
+            <a href="./relatorio_grafico.html">Relatório Gráfico</a>
+            <br><br><hr><br>
+        </nav>
+    </header>
+    <main>
+        <h1>Relatório Gráfico</h1>
+        <br>
+
+        <div class="grafico_container">
+            <h2>Estoque Físico Atual</h2>
+            <canvas id="grafico_estoque"></canvas>
+        </div>
+
+        <div class="grafico_container">
+            <h2>Volume Financeiro de Compras (Top 5)</h2>
+            <canvas id="grafico_volume"></canvas>
+        </div>
+    </main>
+</body>
+
+</html>
